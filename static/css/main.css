@@ -1,5 +1,5 @@
 body {
-    background: #EBEEF1 url(../img/noise.png);
+    background: #fff;
     font-size: 13px;
 }
 .clear {
@@ -22,15 +22,12 @@ a, a:focus {
     padding: 20px 0;
 }
 #content {
-    border-radius: 4px;
     padding: 3px;
-    background-color: #C1CFDC;
 }
 #content .inner {
     background: white;
-    padding: 20px;
-    border-radius: 4px;
-    border: 1px solid #BBB;
+    padding: 10px;
+    border: 0px;
 }
 .CodeMirror {
     height: auto;
@@ -67,32 +64,33 @@ form {
 }
 #sidebar {
     padding: 3px;
-    background-color: #C1CFDC;
     text-shadow: 0 1px 0 #FFFFFF;
-    border-radius: 4px;
     margin-bottom: 5px;
 }
 #sidebar .inner {
     padding: 20px;
-    border: 1px solid #BBB;
-    background-color: #EFF2F4;
-    border-radius: 4px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
 }
 #sidebar h2, .breadcrumbs {
     line-height: 20px;
-    background: #7B848C;
+    background: #fff;
     margin: -21px -21px 20px -21px;
-    padding: 0 20px;
-    line-height: 30px;
-    border: 1px solid #666;
-    border-radius: 4px 4px 0 0;
+    padding: 0px 20px 15px 20px;
+
+    line-height: 18px;
+    border: 0px;
+    border-bottom: 1px #e5e5e5 solid;
+}
+.breadcrumbs {
+    
+    
 }
 #sidebar h2 span {
-    border-radius: 4px 4px 0 0;
-    background: #EFF2F4;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 18px;
-    padding: 5px 10px;
+    padding: 0px 10px 0px 10px;
 }
 #sidebar ul {
     margin-bottom: 0;
@@ -115,7 +113,7 @@ form {
     font-weight: bold;
 }
 #sidebar li.directory > a {
-    color: #333;
+    color: #555;
 }
 #sidebar li.directory > a:hover {
     text-decoration: none;
@@ -135,22 +133,23 @@ form {
 }
 .breadcrumbs li {
     float: left;
-    line-height: 30px;
-    color: white;
+    padding-top: 6px;
+    line-height: 18px;
+    color: #333;
 }
 .breadcrumbs li a {
-    color: white;
+    color: #333;
     margin-right: 15px;
 }
 .breadcrumbs li a:hover {
+    color: #0068DE;
     text-decoration: none;
-    text-shadow: 0 0 3px #656565;
 }
 .breadcrumbs .btn {
-    margin-top: -3px;
+    margin-top: 0px;
 }
 .directory-path {
-    color: #7B848C;
+    color: #333;
     font-weight: normal;
 }
 
@@ -160,6 +159,7 @@ form {
     left: -90px;
 
     color: #444;
+    display: none;
 }
 #logo img {
     width: 75px;
@@ -226,7 +226,7 @@ form {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    border-color: #7B848C;
+    border-color: #ccc;
 }
 #tree-filter-clear-query {
     float: right;
@@ -242,3 +242,7 @@ form {
     font-weight: bold;
     color: #333;
 }
+
+th,td { border: 1px #ccc solid; padding: 6px 8px; }
+th { font-weight: bold; background-color: #f4f4f4; }
+p { margin: 0 0 15px 0; }
