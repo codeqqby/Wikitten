@@ -6,7 +6,7 @@ Wikitten is a small, fast, PHP wiki, and the perfect place to store your notes, 
 
 Check out the **[project website](http://wikitten.vizuina.com)** for more details and features.
 
-[![Wikitten](http://wikitten.vizuina.com/screenshot.png)](http://wikitten.vizuina.com)
+[![Wikitten](https://raw.githubusercontent.com/jeffersonmartin/Wikitten/master/wikitten_clean.png)](http://wikitten.vizuina.com)
 
 ### Features of this Fork (github.com/jeffersonmartin/Wikitten)
 * Clean theme for business team use
