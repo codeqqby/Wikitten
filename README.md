@@ -32,6 +32,8 @@ Check out the **[project website](http://wikitten.vizuina.com)** for more detail
 
 In `/etc/apache2/` or another non-web accessible location of your choice, create an `.htpasswd` file and use one of the htpasswd generators on the web to create user accounts. If you do not use `/etc/apache2/.htpasswd` as your path, be sure to update it in the `.htaccess` file below.
 
+In `/etc/apache2/sites-enabled/000-default`, locate the VirtualHost *:80 for your wiki and modify the AllowOverride from None to All.
+
 In the root directory of your wiki (Ex. `/var/www/mywiki/`), create a new .htaccess file and copy the following syntax in:
 
 	AuthName "My Wiki"
