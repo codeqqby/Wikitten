@@ -1,4 +1,4 @@
-<div class="breadcrumbs">    
+<div class="breadcrumbs">
     <div class="pull-right">
         <?php if ($html && isset($source)): ?>
             <a href="javascript:;" class="btn btn-mini btn-inverse" id="toggle">Toggle source</a>
@@ -6,13 +6,10 @@
         <?php if ($use_pastebin): ?>
             <a href="javascript:;" class="btn btn-mini btn-inverse" id="create-pastebin" title="Create public Paste on PasteBin">Create public Paste</a>
         <?php endif; ?>
-    </div>    
+    </div>
 
     <?php $path = array(); ?>
     <ul class="unstyled">
-        <li>
-            <a href="<?php echo BASE_URL; ?>"><i class="icon-home icon-white"></i> /wiki</a>
-        </li>
         <?php $i = 0; ?>
 
         <?php foreach ($parts as $part): ?>
@@ -21,9 +18,9 @@
             <li>
                 <a href="<?php echo htmlspecialchars($url, ENT_QUOTES, 'UTF-8') ?>">
                     <?php if (++$i == count($parts) && !$is_dir): ?>
-                        <i class="icon-file icon-white"></i>
+                        /
                     <?php else: ?>
-                        <i class="icon-folder-open icon-white"></i>
+                        /
                     <?php endif ?>
                     <?php echo $part; ?>
                 </a>
@@ -146,7 +143,7 @@
                 url: '<?php echo BASE_URL . '/?a=createPasteBin'; ?>',
                 data: { ref: '<?php echo base64_encode($page['file']); ?>' },
                 context: $(this)
-            }).done(function(response) {                
+            }).done(function(response) {
                 $(this).removeClass('disabled');
 
                 if (response.status === 'ok') {
