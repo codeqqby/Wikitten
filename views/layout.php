@@ -17,6 +17,8 @@ function e($dirty) {
 
         <base href="<?php echo BASE_URL; ?>/">
 
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,600,700,300' rel='stylesheet' type='text/css'>
+
         <link rel="shortcut icon" href="static/img/favicon.ico">
         <link rel="stylesheet" href="static/css/bootstrap.min.css">
         <link rel="stylesheet" href="static/css/prettify.css">
