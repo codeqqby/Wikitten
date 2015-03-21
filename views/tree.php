@@ -9,16 +9,18 @@ function tree($array, $parent, $parts = array(), $step = 0) {
     $t = '<ul class="unstyled" '.$tid.'>';
 
     foreach ($array as $key => $item) {
+
         if (is_array($item)) {
             $open = $step !== false && (isset($parts[$step]) && $key == $parts[$step]);
 
             $t .= '<li class="directory'. ($open ? ' open' : '') .'">';
-                $t .= '<a href="#" data-role="directory"><i class="icon icon-folder-'. ($open ? 'open' : 'close') .'"></i> ' . $key . '</a>';
+                $t .= '<a href="#" data-role="directory">' . $key . '</a>';
                 $t .= tree($item, "$parent/$key", $parts, $open ? $step + 1 : false);
             $t .=  '</li>';
         } else {
             $selected = (isset($parts[$step]) && $item == $parts[$step]);
-            $t .= '<li class="file'. ($selected ? ' active' : '') .'"><a href="'. $parent .'/'. $item . '">'.$item.'</a></li>';
+            $item_no_extension = substr($item, 0 , (strpos($item, ".")));
+            $t .= '<li class="file'. ($selected ? ' active' : '') .'"><a href="'. $parent .'/'. $item . '">'.$item_no_extension.'</a></li>';
         }
     }
 
